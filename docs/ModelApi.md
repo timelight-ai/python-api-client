@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.ModelApi
+# timelight_ai_python_api_client.ModelApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,19 +19,19 @@ Update many models at once, mainly used to set color and name of the model
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ModelApi(timelight-ai-python-api-client.ApiClient(configuration))
-models_patch_dto = timelight-ai-python-api-client.ModelsPatchDto() # ModelsPatchDto | 
+api_instance = timelight_ai_python_api_client.ModelApi(timelight_ai_python_api_client.ApiClient(configuration))
+models_patch_dto = timelight_ai_python_api_client.ModelsPatchDto() # ModelsPatchDto | 
 
 try:
     # Model bulk update
@@ -71,18 +71,18 @@ List models data of this source
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ModelApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.ModelApi(timelight_ai_python_api_client.ApiClient(configuration))
 source_id = 8.14 # float | 
 
 try:

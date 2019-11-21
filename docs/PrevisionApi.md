@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.PrevisionApi
+# timelight_ai_python_api_client.PrevisionApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,19 +20,19 @@ Apply a source prevision to the whole group
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.PrevisionApi(timelight-ai-python-api-client.ApiClient(configuration))
-prevision_apply_group_dto = timelight-ai-python-api-client.PrevisionApplyGroupDto() # PrevisionApplyGroupDto | 
+api_instance = timelight_ai_python_api_client.PrevisionApi(timelight_ai_python_api_client.ApiClient(configuration))
+prevision_apply_group_dto = timelight_ai_python_api_client.PrevisionApplyGroupDto() # PrevisionApplyGroupDto | 
 
 try:
     # Apply a source prevision to the whole group
@@ -72,18 +72,18 @@ Fetch data previsions for a given year
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.PrevisionApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.PrevisionApi(timelight_ai_python_api_client.ApiClient(configuration))
 year = 8.14 # float | 
 source_id = 8.14 # float | 
 
@@ -126,18 +126,18 @@ Generate default previsions for the source and save them
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.PrevisionApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.PrevisionApi(timelight_ai_python_api_client.ApiClient(configuration))
 year = 8.14 # float | 
 source_id = 8.14 # float | 
 
@@ -180,19 +180,19 @@ Save many previsions at once
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.PrevisionApi(timelight-ai-python-api-client.ApiClient(configuration))
-prevision_bulk_save_dto = timelight-ai-python-api-client.PrevisionBulkSaveDto() # PrevisionBulkSaveDto | 
+api_instance = timelight_ai_python_api_client.PrevisionApi(timelight_ai_python_api_client.ApiClient(configuration))
+prevision_bulk_save_dto = timelight_ai_python_api_client.PrevisionBulkSaveDto() # PrevisionBulkSaveDto | 
 
 try:
     # Save many previsions at once
@@ -232,19 +232,19 @@ Update a specific prevision
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.PrevisionApi(timelight-ai-python-api-client.ApiClient(configuration))
-prevision_patch_dto = timelight-ai-python-api-client.PrevisionPatchDto() # PrevisionPatchDto | 
+api_instance = timelight_ai_python_api_client.PrevisionApi(timelight_ai_python_api_client.ApiClient(configuration))
+prevision_patch_dto = timelight_ai_python_api_client.PrevisionPatchDto() # PrevisionPatchDto | 
 
 try:
     # Update a specific prevision

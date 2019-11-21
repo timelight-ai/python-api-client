@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.UserApi
+# timelight_ai_python_api_client.UserApi
 
 All URIs are relative to *http://localhost*
 
@@ -20,13 +20,13 @@ This endpoints returns the jwt and sets a cookie with the same jwt.      This wa
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.UserApi()
-login_dto = timelight-ai-python-api-client.LoginDto() # LoginDto | 
+api_instance = timelight_ai_python_api_client.UserApi()
+login_dto = timelight_ai_python_api_client.LoginDto() # LoginDto | 
 
 try:
     # Log the user in
@@ -68,18 +68,18 @@ Must be authenticated to call this endpoint
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.UserApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.UserApi(timelight_ai_python_api_client.ApiClient(configuration))
 
 try:
     # Retrieve current user information
@@ -116,13 +116,13 @@ This endpoint does not need any parameter.
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.UserApi()
-request_demo_dto = timelight-ai-python-api-client.RequestDemoDto() # RequestDemoDto | 
+api_instance = timelight_ai_python_api_client.UserApi()
+request_demo_dto = timelight_ai_python_api_client.RequestDemoDto() # RequestDemoDto | 
 
 try:
     api_response = api_instance.v1_user_register_demo_post(request_demo_dto)

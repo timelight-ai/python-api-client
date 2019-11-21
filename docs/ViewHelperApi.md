@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.ViewHelperApi
+# timelight_ai_python_api_client.ViewHelperApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,18 +18,18 @@ Get the alert view data
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ViewHelperApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.ViewHelperApi(timelight_ai_python_api_client.ApiClient(configuration))
 
 try:
     # Get the alert view data
@@ -65,18 +65,18 @@ Get the alert referential view data
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ViewHelperApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.ViewHelperApi(timelight_ai_python_api_client.ApiClient(configuration))
 
 try:
     # Get the alert referential view data
@@ -113,18 +113,18 @@ Get the alert modal view data
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ViewHelperApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.ViewHelperApi(timelight_ai_python_api_client.ApiClient(configuration))
 day_date = 'day_date_example' # str | 
 source_id = 8.14 # float | 
 

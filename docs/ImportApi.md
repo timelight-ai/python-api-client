@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.ImportApi
+# timelight_ai_python_api_client.ImportApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,19 +21,19 @@ Creates a source, add a first batch of day data, then computes the models for th
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ImportApi(timelight-ai-python-api-client.ApiClient(configuration))
-create_source_dto = timelight-ai-python-api-client.CreateSourceDto() # CreateSourceDto | 
+api_instance = timelight_ai_python_api_client.ImportApi(timelight_ai_python_api_client.ApiClient(configuration))
+create_source_dto = timelight_ai_python_api_client.CreateSourceDto() # CreateSourceDto | 
 
 try:
     # First source creation
@@ -74,19 +74,19 @@ When new data is added, we compute alerts for this data
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ImportApi(timelight-ai-python-api-client.ApiClient(configuration))
-import_days_dto = timelight-ai-python-api-client.ImportDaysDto() # ImportDaysDto | 
+api_instance = timelight_ai_python_api_client.ImportApi(timelight_ai_python_api_client.ApiClient(configuration))
+import_days_dto = timelight_ai_python_api_client.ImportDaysDto() # ImportDaysDto | 
 
 try:
     # Add new data to a source
@@ -127,18 +127,18 @@ Compute maps, alerts and closest models
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ImportApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.ImportApi(timelight_ai_python_api_client.ApiClient(configuration))
 year = 8.14 # float | 
 source_id = 8.14 # float | 
 
@@ -182,20 +182,20 @@ When new data is added, we compute alerts for this data
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.ImportApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.ImportApi(timelight_ai_python_api_client.ApiClient(configuration))
 source_id = 8.14 # float | 
-import_days_dto = timelight-ai-python-api-client.ImportDaysDto() # ImportDaysDto | 
+import_days_dto = timelight_ai_python_api_client.ImportDaysDto() # ImportDaysDto | 
 
 try:
     # Add new data to a source

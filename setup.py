@@ -13,7 +13,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "timelight-ai-python-api-client"
+NAME = "timelight_ai_python_api_client"
 VERSION = "1.0.4"
 # To install the library, run the following
 #
@@ -30,7 +30,7 @@ setup(
     description="timelight",
     author_email="",
     url="https://timelight.tech",
-    keywords=["timelight"],
+    keywords=["Swagger", "timelight"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,

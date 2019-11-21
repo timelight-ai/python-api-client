@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.AlertApi
+# timelight_ai_python_api_client.AlertApi
 
 All URIs are relative to *http://localhost*
 
@@ -21,19 +21,19 @@ A commented alert is closed and is moved to the alert referential
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.AlertApi(timelight-ai-python-api-client.ApiClient(configuration))
-alert_comment_dto = timelight-ai-python-api-client.AlertCommentDto() # AlertCommentDto | 
+api_instance = timelight_ai_python_api_client.AlertApi(timelight_ai_python_api_client.ApiClient(configuration))
+alert_comment_dto = timelight_ai_python_api_client.AlertCommentDto() # AlertCommentDto | 
 alert_id = 8.14 # float | 
 
 try:
@@ -75,19 +75,19 @@ Set alert favorite for the current user
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.AlertApi(timelight-ai-python-api-client.ApiClient(configuration))
-alert_favorite_dto = timelight-ai-python-api-client.AlertFavoriteDto() # AlertFavoriteDto | 
+api_instance = timelight_ai_python_api_client.AlertApi(timelight_ai_python_api_client.ApiClient(configuration))
+alert_favorite_dto = timelight_ai_python_api_client.AlertFavoriteDto() # AlertFavoriteDto | 
 alert_id = 8.14 # float | 
 
 try:
@@ -129,18 +129,18 @@ List alerts data of the selected year, all alerts if no year is provided
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.AlertApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.AlertApi(timelight_ai_python_api_client.ApiClient(configuration))
 source_id = 8.14 # float |  (optional)
 year = 8.14 # float |  (optional)
 
@@ -183,18 +183,18 @@ List alerts data of the selected year, all alerts if no year is provided
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.AlertApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.AlertApi(timelight_ai_python_api_client.ApiClient(configuration))
 source_id = 8.14 # float |  (optional)
 year = 8.14 # float |  (optional)
 

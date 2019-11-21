@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.DayApi
+# timelight_ai_python_api_client.DayApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,19 +17,19 @@ Update day entities
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.DayApi(timelight-ai-python-api-client.ApiClient(configuration))
-days_patch_dto = timelight-ai-python-api-client.DaysPatchDto() # DaysPatchDto | 
+api_instance = timelight_ai_python_api_client.DayApi(timelight_ai_python_api_client.ApiClient(configuration))
+days_patch_dto = timelight_ai_python_api_client.DaysPatchDto() # DaysPatchDto | 
 
 try:
     # Update day entities
@@ -69,18 +69,18 @@ List day data of the reference year
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.DayApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.DayApi(timelight_ai_python_api_client.ApiClient(configuration))
 year = 8.14 # float | 
 source_id = 8.14 # float | 
 

@@ -1,4 +1,4 @@
-# timelight-ai-python-api-client.SourceGroupApi
+# timelight_ai_python_api_client.SourceGroupApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,19 +18,19 @@ Create a new source groups
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.SourceGroupApi(timelight-ai-python-api-client.ApiClient(configuration))
-source_group_create_dto = timelight-ai-python-api-client.SourceGroupCreateDto() # SourceGroupCreateDto | 
+api_instance = timelight_ai_python_api_client.SourceGroupApi(timelight_ai_python_api_client.ApiClient(configuration))
+source_group_create_dto = timelight_ai_python_api_client.SourceGroupCreateDto() # SourceGroupCreateDto | 
 
 try:
     # Create a new source groups
@@ -70,19 +70,19 @@ Updates a group configuration
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.SourceGroupApi(timelight-ai-python-api-client.ApiClient(configuration))
-source_group_patch_dto = timelight-ai-python-api-client.SourceGroupPatchDto() # SourceGroupPatchDto | 
+api_instance = timelight_ai_python_api_client.SourceGroupApi(timelight_ai_python_api_client.ApiClient(configuration))
+source_group_patch_dto = timelight_ai_python_api_client.SourceGroupPatchDto() # SourceGroupPatchDto | 
 group_id = 8.14 # float | 
 
 try:
@@ -124,18 +124,18 @@ All source groups
 ```python
 from __future__ import print_function
 import time
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = timelight-ai-python-api-client.Configuration()
+configuration = timelight_ai_python_api_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = timelight-ai-python-api-client.SourceGroupApi(timelight-ai-python-api-client.ApiClient(configuration))
+api_instance = timelight_ai_python_api_client.SourceGroupApi(timelight_ai_python_api_client.ApiClient(configuration))
 
 try:
     # All source groups
