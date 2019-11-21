@@ -38,18 +38,18 @@ class ImportApi(object):
 
         Creates a source, add a first batch of day data, then computes the models for the first time.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_create_source_post(create_source_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_create_source_post(create_source_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateSourceDto create_source_dto: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_import_create_source_post_with_http_info(create_source_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_import_create_source_post_with_http_info(create_source_dto, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class ImportApi(object):
 
         Creates a source, add a first batch of day data, then computes the models for the first time.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_create_source_post_with_http_info(create_source_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_create_source_post_with_http_info(create_source_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param CreateSourceDto create_source_dto: (required)
         :return: None
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class ImportApi(object):
         """
 
         all_params = ['create_source_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class ImportApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -137,18 +137,18 @@ class ImportApi(object):
 
         When new data is added, we compute alerts for this data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_days_post(import_days_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_days_post(import_days_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ImportDaysDto import_days_dto: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_import_days_post_with_http_info(import_days_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_import_days_post_with_http_info(import_days_dto, **kwargs)  # noqa: E501
@@ -159,11 +159,11 @@ class ImportApi(object):
 
         When new data is added, we compute alerts for this data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_days_post_with_http_info(import_days_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_days_post_with_http_info(import_days_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ImportDaysDto import_days_dto: (required)
         :return: None
                  If the method is called asynchronously,
@@ -171,7 +171,7 @@ class ImportApi(object):
         """
 
         all_params = ['import_days_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class ImportApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -236,11 +236,11 @@ class ImportApi(object):
 
         Compute maps, alerts and closest models  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_reprocess_days_source_id_year_post(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_reprocess_days_source_id_year_post(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: None
@@ -248,7 +248,7 @@ class ImportApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_import_reprocess_days_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_import_reprocess_days_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
@@ -259,11 +259,11 @@ class ImportApi(object):
 
         Compute maps, alerts and closest models  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_reprocess_days_source_id_year_post_with_http_info(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_reprocess_days_source_id_year_post_with_http_info(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: None
@@ -272,7 +272,7 @@ class ImportApi(object):
         """
 
         all_params = ['year', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -332,7 +332,7 @@ class ImportApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -343,11 +343,11 @@ class ImportApi(object):
 
         When new data is added, we compute alerts for this data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_source_id_days_post(source_id, import_days_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_source_id_days_post(source_id, import_days_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :param ImportDaysDto import_days_dto: (required)
         :return: None
@@ -355,7 +355,7 @@ class ImportApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_import_source_id_days_post_with_http_info(source_id, import_days_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_import_source_id_days_post_with_http_info(source_id, import_days_dto, **kwargs)  # noqa: E501
@@ -366,11 +366,11 @@ class ImportApi(object):
 
         When new data is added, we compute alerts for this data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_import_source_id_days_post_with_http_info(source_id, import_days_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_import_source_id_days_post_with_http_info(source_id, import_days_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :param ImportDaysDto import_days_dto: (required)
         :return: None
@@ -379,7 +379,7 @@ class ImportApi(object):
         """
 
         all_params = ['source_id', 'import_days_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -439,7 +439,7 @@ class ImportApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

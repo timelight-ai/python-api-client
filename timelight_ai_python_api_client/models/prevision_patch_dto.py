@@ -150,6 +150,9 @@ class PrevisionPatchDto(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(PrevisionPatchDto, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

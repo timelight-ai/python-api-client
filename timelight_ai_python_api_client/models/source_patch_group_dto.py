@@ -92,6 +92,9 @@ class SourcePatchGroupDto(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(SourcePatchGroupDto, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

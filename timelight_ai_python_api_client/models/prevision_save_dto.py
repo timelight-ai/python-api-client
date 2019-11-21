@@ -121,6 +121,9 @@ class PrevisionSaveDto(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(PrevisionSaveDto, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

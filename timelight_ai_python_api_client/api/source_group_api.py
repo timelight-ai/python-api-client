@@ -37,18 +37,18 @@ class SourceGroupApi(object):
         """Create a new source groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_group_create_post(source_group_create_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_group_create_post(source_group_create_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourceGroupCreateDto source_group_create_dto: (required)
         :return: SourceGroupDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_source_group_create_post_with_http_info(source_group_create_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_source_group_create_post_with_http_info(source_group_create_dto, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class SourceGroupApi(object):
         """Create a new source groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_group_create_post_with_http_info(source_group_create_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_group_create_post_with_http_info(source_group_create_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourceGroupCreateDto source_group_create_dto: (required)
         :return: SourceGroupDto
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class SourceGroupApi(object):
         """
 
         all_params = ['source_group_create_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class SourceGroupApi(object):
             files=local_var_files,
             response_type='SourceGroupDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -134,11 +134,11 @@ class SourceGroupApi(object):
         """Updates a group configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_group_group_id_patch(source_group_patch_dto, group_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_group_group_id_patch(source_group_patch_dto, group_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourceGroupPatchDto source_group_patch_dto: (required)
         :param float group_id: (required)
         :return: SourceGroupDto
@@ -146,7 +146,7 @@ class SourceGroupApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_source_group_group_id_patch_with_http_info(source_group_patch_dto, group_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_source_group_group_id_patch_with_http_info(source_group_patch_dto, group_id, **kwargs)  # noqa: E501
@@ -156,11 +156,11 @@ class SourceGroupApi(object):
         """Updates a group configuration  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_group_group_id_patch_with_http_info(source_group_patch_dto, group_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_group_group_id_patch_with_http_info(source_group_patch_dto, group_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourceGroupPatchDto source_group_patch_dto: (required)
         :param float group_id: (required)
         :return: SourceGroupDto
@@ -169,7 +169,7 @@ class SourceGroupApi(object):
         """
 
         all_params = ['source_group_patch_dto', 'group_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class SourceGroupApi(object):
             files=local_var_files,
             response_type='SourceGroupDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -239,17 +239,17 @@ class SourceGroupApi(object):
         """All source groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_group_list_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_group_list_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: SourceGroupListDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_source_group_list_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.v1_source_group_list_get_with_http_info(**kwargs)  # noqa: E501
@@ -259,18 +259,18 @@ class SourceGroupApi(object):
         """All source groups  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_group_list_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_group_list_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: SourceGroupListDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -318,7 +318,7 @@ class SourceGroupApi(object):
             files=local_var_files,
             response_type='SourceGroupListDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

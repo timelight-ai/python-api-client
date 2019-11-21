@@ -38,11 +38,11 @@ class AlertApi(object):
 
         A commented alert is closed and is moved to the alert referential  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_alert_id_comment_patch(alert_comment_dto, alert_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_alert_id_comment_patch(alert_comment_dto, alert_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AlertCommentDto alert_comment_dto: (required)
         :param float alert_id: (required)
         :return: AlertRefDto
@@ -50,7 +50,7 @@ class AlertApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_alert_alert_id_comment_patch_with_http_info(alert_comment_dto, alert_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_alert_alert_id_comment_patch_with_http_info(alert_comment_dto, alert_id, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class AlertApi(object):
 
         A commented alert is closed and is moved to the alert referential  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_alert_id_comment_patch_with_http_info(alert_comment_dto, alert_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_alert_id_comment_patch_with_http_info(alert_comment_dto, alert_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AlertCommentDto alert_comment_dto: (required)
         :param float alert_id: (required)
         :return: AlertRefDto
@@ -74,7 +74,7 @@ class AlertApi(object):
         """
 
         all_params = ['alert_comment_dto', 'alert_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -134,7 +134,7 @@ class AlertApi(object):
             files=local_var_files,
             response_type='AlertRefDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -144,11 +144,11 @@ class AlertApi(object):
         """Set alert favorite for the current user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_alert_id_favorite_patch(alert_favorite_dto, alert_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_alert_id_favorite_patch(alert_favorite_dto, alert_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AlertFavoriteDto alert_favorite_dto: (required)
         :param float alert_id: (required)
         :return: AlertDto
@@ -156,7 +156,7 @@ class AlertApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_alert_alert_id_favorite_patch_with_http_info(alert_favorite_dto, alert_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_alert_alert_id_favorite_patch_with_http_info(alert_favorite_dto, alert_id, **kwargs)  # noqa: E501
@@ -166,11 +166,11 @@ class AlertApi(object):
         """Set alert favorite for the current user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_alert_id_favorite_patch_with_http_info(alert_favorite_dto, alert_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_alert_id_favorite_patch_with_http_info(alert_favorite_dto, alert_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param AlertFavoriteDto alert_favorite_dto: (required)
         :param float alert_id: (required)
         :return: AlertDto
@@ -179,7 +179,7 @@ class AlertApi(object):
         """
 
         all_params = ['alert_favorite_dto', 'alert_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -239,7 +239,7 @@ class AlertApi(object):
             files=local_var_files,
             response_type='AlertDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -249,11 +249,11 @@ class AlertApi(object):
         """List alerts data of the selected year, all alerts if no year is provided  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_list_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_list_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id:
         :param float year:
         :return: AlertListDto
@@ -261,7 +261,7 @@ class AlertApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_alert_list_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.v1_alert_list_get_with_http_info(**kwargs)  # noqa: E501
@@ -271,11 +271,11 @@ class AlertApi(object):
         """List alerts data of the selected year, all alerts if no year is provided  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_list_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_list_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id:
         :param float year:
         :return: AlertListDto
@@ -284,7 +284,7 @@ class AlertApi(object):
         """
 
         all_params = ['source_id', 'year']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -336,7 +336,7 @@ class AlertApi(object):
             files=local_var_files,
             response_type='AlertListDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -346,11 +346,11 @@ class AlertApi(object):
         """List alerts data of the selected year, all alerts if no year is provided  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_ref_list_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_ref_list_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id:
         :param float year:
         :return: AlertRefListDto
@@ -358,7 +358,7 @@ class AlertApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_alert_ref_list_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.v1_alert_ref_list_get_with_http_info(**kwargs)  # noqa: E501
@@ -368,11 +368,11 @@ class AlertApi(object):
         """List alerts data of the selected year, all alerts if no year is provided  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_alert_ref_list_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_alert_ref_list_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id:
         :param float year:
         :return: AlertRefListDto
@@ -381,7 +381,7 @@ class AlertApi(object):
         """
 
         all_params = ['source_id', 'year']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -433,7 +433,7 @@ class AlertApi(object):
             files=local_var_files,
             response_type='AlertRefListDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

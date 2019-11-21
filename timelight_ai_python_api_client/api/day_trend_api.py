@@ -37,18 +37,18 @@ class DayTrendApi(object):
         """Create many DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_bulk_post(generated_day_trend_bulk_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_bulk_post(generated_day_trend_bulk_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param GeneratedDayTrendBulkDto generated_day_trend_bulk_dto: (required)
         :return: list[DayTrend]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_bulk_post_with_http_info(generated_day_trend_bulk_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_bulk_post_with_http_info(generated_day_trend_bulk_dto, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class DayTrendApi(object):
         """Create many DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_bulk_post_with_http_info(generated_day_trend_bulk_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_bulk_post_with_http_info(generated_day_trend_bulk_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param GeneratedDayTrendBulkDto generated_day_trend_bulk_dto: (required)
         :return: list[DayTrend]
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['generated_day_trend_bulk_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='list[DayTrend]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -134,11 +134,11 @@ class DayTrendApi(object):
         """Retrieve many DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str fields: <h4>Selects fields that should be returned in the reponse body.</h4><i>Syntax:</i> <strong>?fields=field1,field2,...</strong> <br/><i>Example:</i> <strong>?fields=email,name</strong>
         :param str filter: <h4>Adds fields request condition (multiple conditions) to the request.</h4><i>Syntax:</i> <strong>?filter=field||condition||value</strong><br/><i>Examples:</i> <ul><li><strong>?filter=name||eq||batman</strong></li><li><strong>?filter=isVillain||eq||false&filter=city||eq||Arkham</strong> (multiple filters are treated as a combination of AND type of conditions)</li><li><strong>?filter=shots||in||12,26</strong> (some conditions accept multiple values separated by commas)</li><li><strong>?filter=power||isnull</strong> (some conditions don't accept value)</li></ul><br/>Filter Conditions:<ul><li><strong><code>eq</code></strong> (<code>=</code>, equal)</li><li><strong><code>ne</code></strong> (<code>!=</code>, not equal)</li><li><strong><code>gt</code></strong> (<code>&gt;</code>, greater than)</li><li><strong><code>lt</code></strong> (<code>&lt;</code>, lower that)</li><li><strong><code>gte</code></strong> (<code>&gt;=</code>, greater than or equal)</li><li><strong><code>lte</code></strong> (<code>&lt;=</code>, lower than or equal)</li><li><strong><code>starts</code></strong> (<code>LIKE val%</code>, starts with)</li><li><strong><code>ends</code></strong> (<code>LIKE %val</code>, ends with)</li><li><strong><code>cont</code></strong> (<code>LIKE %val%</code>, contains)</li><li><strong><code>excl</code></strong> (<code>NOT LIKE %val%</code>, not contains)</li><li><strong><code>in</code></strong> (<code>IN</code>, in range, <strong><em>accepts multiple values</em></strong>)</li><li><strong><code>notin</code></strong> (<code>NOT IN</code>, not in range, <strong><em>accepts multiple values</em></strong>)</li><li><strong><code>isnull</code></strong> (<code>IS NULL</code>, is NULL, <strong><em>doesn't accept value</em></strong>)</li><li><strong><code>notnull</code></strong> (<code>IS NOT NULL</code>, not NULL, <strong><em>doesn't accept value</em></strong>)</li><li><strong><code>between</code></strong> (<code>BETWEEN</code>, between, <strong><em>accepts two values</em></strong>)</li></ul>
         :param str _or: <h4>Adds <code>OR</code> conditions to the request.</h4><i>Syntax:</i> <strong>?or=field||condition||value</strong><br/>It uses the same conditions as the filter parameter<br/><i>Rules and <i>Examples:</i></i><ul><li>If there is only <strong>one</strong> <code>or</code> present (without <code>filter</code>) then it will be interpreted as simple filter:</li><ul><li><strong>?or=name||eq||batman</strong></li></ul></ul><ul><li>If there are <strong>multiple</strong> <code>or</code> present (without <code>filter</code>) then it will be interpreted as a compination of <code>OR</code> conditions, as follows:<br><code>WHERE {or} OR {or} OR ...</code></li><ul><li><strong>?or=name||eq||batman&or=name||eq||joker</strong></li></ul></ul><ul><li>If there are <strong>one</strong> <code>or</code> and <strong>one</strong> <code>filter</code> then it will be interpreted as <code>OR</code> condition, as follows:<br><code>WHERE {filter} OR {or}</code></li><ul><li><strong>?filter=name||eq||batman&or=name||eq||joker</strong></li></ul></ul><ul><li>If present <strong>both</strong> <code>or</code> and <code>filter</code> in any amount (<strong>one</strong> or <strong>miltiple</strong> each) then both interpreted as a combitation of <code>AND</code> conditions and compared with each other by <code>OR</code> condition, as follows:<br><code>WHERE ({filter} AND {filter} AND ...) OR ({or} AND {or} AND ...)</code></li><ul><li><strong>?filter=type||eq||hero&filter=status||eq||alive&or=type||eq||villain&or=status||eq||dead</strong></li></ul></ul>
@@ -153,7 +153,7 @@ class DayTrendApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_get_with_http_info(**kwargs)  # noqa: E501
@@ -163,11 +163,11 @@ class DayTrendApi(object):
         """Retrieve many DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str fields: <h4>Selects fields that should be returned in the reponse body.</h4><i>Syntax:</i> <strong>?fields=field1,field2,...</strong> <br/><i>Example:</i> <strong>?fields=email,name</strong>
         :param str filter: <h4>Adds fields request condition (multiple conditions) to the request.</h4><i>Syntax:</i> <strong>?filter=field||condition||value</strong><br/><i>Examples:</i> <ul><li><strong>?filter=name||eq||batman</strong></li><li><strong>?filter=isVillain||eq||false&filter=city||eq||Arkham</strong> (multiple filters are treated as a combination of AND type of conditions)</li><li><strong>?filter=shots||in||12,26</strong> (some conditions accept multiple values separated by commas)</li><li><strong>?filter=power||isnull</strong> (some conditions don't accept value)</li></ul><br/>Filter Conditions:<ul><li><strong><code>eq</code></strong> (<code>=</code>, equal)</li><li><strong><code>ne</code></strong> (<code>!=</code>, not equal)</li><li><strong><code>gt</code></strong> (<code>&gt;</code>, greater than)</li><li><strong><code>lt</code></strong> (<code>&lt;</code>, lower that)</li><li><strong><code>gte</code></strong> (<code>&gt;=</code>, greater than or equal)</li><li><strong><code>lte</code></strong> (<code>&lt;=</code>, lower than or equal)</li><li><strong><code>starts</code></strong> (<code>LIKE val%</code>, starts with)</li><li><strong><code>ends</code></strong> (<code>LIKE %val</code>, ends with)</li><li><strong><code>cont</code></strong> (<code>LIKE %val%</code>, contains)</li><li><strong><code>excl</code></strong> (<code>NOT LIKE %val%</code>, not contains)</li><li><strong><code>in</code></strong> (<code>IN</code>, in range, <strong><em>accepts multiple values</em></strong>)</li><li><strong><code>notin</code></strong> (<code>NOT IN</code>, not in range, <strong><em>accepts multiple values</em></strong>)</li><li><strong><code>isnull</code></strong> (<code>IS NULL</code>, is NULL, <strong><em>doesn't accept value</em></strong>)</li><li><strong><code>notnull</code></strong> (<code>IS NOT NULL</code>, not NULL, <strong><em>doesn't accept value</em></strong>)</li><li><strong><code>between</code></strong> (<code>BETWEEN</code>, between, <strong><em>accepts two values</em></strong>)</li></ul>
         :param str _or: <h4>Adds <code>OR</code> conditions to the request.</h4><i>Syntax:</i> <strong>?or=field||condition||value</strong><br/>It uses the same conditions as the filter parameter<br/><i>Rules and <i>Examples:</i></i><ul><li>If there is only <strong>one</strong> <code>or</code> present (without <code>filter</code>) then it will be interpreted as simple filter:</li><ul><li><strong>?or=name||eq||batman</strong></li></ul></ul><ul><li>If there are <strong>multiple</strong> <code>or</code> present (without <code>filter</code>) then it will be interpreted as a compination of <code>OR</code> conditions, as follows:<br><code>WHERE {or} OR {or} OR ...</code></li><ul><li><strong>?or=name||eq||batman&or=name||eq||joker</strong></li></ul></ul><ul><li>If there are <strong>one</strong> <code>or</code> and <strong>one</strong> <code>filter</code> then it will be interpreted as <code>OR</code> condition, as follows:<br><code>WHERE {filter} OR {or}</code></li><ul><li><strong>?filter=name||eq||batman&or=name||eq||joker</strong></li></ul></ul><ul><li>If present <strong>both</strong> <code>or</code> and <code>filter</code> in any amount (<strong>one</strong> or <strong>miltiple</strong> each) then both interpreted as a combitation of <code>AND</code> conditions and compared with each other by <code>OR</code> condition, as follows:<br><code>WHERE ({filter} AND {filter} AND ...) OR ({or} AND {or} AND ...)</code></li><ul><li><strong>?filter=type||eq||hero&filter=status||eq||alive&or=type||eq||villain&or=status||eq||dead</strong></li></ul></ul>
@@ -183,7 +183,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['fields', 'filter', '_or', 'sort', 'join', 'per_page', 'offset', 'page', 'cache']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -249,7 +249,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='list[DayTrend]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -259,18 +259,18 @@ class DayTrendApi(object):
         """Delete one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_delete(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_delete(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float id: (required)
         :return: DayTrend
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_id_delete_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_id_delete_with_http_info(id, **kwargs)  # noqa: E501
@@ -280,11 +280,11 @@ class DayTrendApi(object):
         """Delete one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_delete_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_delete_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float id: (required)
         :return: DayTrend
                  If the method is called asynchronously,
@@ -292,7 +292,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -346,7 +346,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='DayTrend',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -356,11 +356,11 @@ class DayTrendApi(object):
         """Retrieve one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_get(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_get(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float id: (required)
         :param str fields: <h4>Selects fields that should be returned in the reponse body.</h4><i>Syntax:</i> <strong>?fields=field1,field2,...</strong> <br/><i>Example:</i> <strong>?fields=email,name</strong>
         :param str join: <h4>Receive joined relational objects in GET result (with all or selected fields).</h4><i>Syntax:</i><ul><li><strong>?join=relation</strong></li><li><strong>?join=relation||field1,field2,...</strong></li><li><strong>?join=relation1||field11,field12,...&join=relation1.nested||field21,field22,...&join=...</strong></li></ul><br/><i>Examples:</i></i><ul><li><strong>?join=profile</strong></li><li><strong>?join=profile||firstName,email</strong></li><li><strong>?join=profile||firstName,email&join=notifications||content&join=tasks</strong></li><li><strong>?join=relation1&join=relation1.nested&join=relation1.nested.deepnested</strong></li></ul><strong><i>Notice:</i></strong> <code>id</code> field always persists in relational objects. To use nested relations, the parent level MUST be set before the child level like example above.
@@ -370,7 +370,7 @@ class DayTrendApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_id_get_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_id_get_with_http_info(id, **kwargs)  # noqa: E501
@@ -380,11 +380,11 @@ class DayTrendApi(object):
         """Retrieve one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_get_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_get_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float id: (required)
         :param str fields: <h4>Selects fields that should be returned in the reponse body.</h4><i>Syntax:</i> <strong>?fields=field1,field2,...</strong> <br/><i>Example:</i> <strong>?fields=email,name</strong>
         :param str join: <h4>Receive joined relational objects in GET result (with all or selected fields).</h4><i>Syntax:</i><ul><li><strong>?join=relation</strong></li><li><strong>?join=relation||field1,field2,...</strong></li><li><strong>?join=relation1||field11,field12,...&join=relation1.nested||field21,field22,...&join=...</strong></li></ul><br/><i>Examples:</i></i><ul><li><strong>?join=profile</strong></li><li><strong>?join=profile||firstName,email</strong></li><li><strong>?join=profile||firstName,email&join=notifications||content&join=tasks</strong></li><li><strong>?join=relation1&join=relation1.nested&join=relation1.nested.deepnested</strong></li></ul><strong><i>Notice:</i></strong> <code>id</code> field always persists in relational objects. To use nested relations, the parent level MUST be set before the child level like example above.
@@ -395,7 +395,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['id', 'fields', 'join', 'cache']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -455,7 +455,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='DayTrend',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -465,11 +465,11 @@ class DayTrendApi(object):
         """Update one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_patch(day_trend, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_patch(day_trend, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DayTrend day_trend: (required)
         :param float id: (required)
         :return: DayTrend
@@ -477,7 +477,7 @@ class DayTrendApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_id_patch_with_http_info(day_trend, id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_id_patch_with_http_info(day_trend, id, **kwargs)  # noqa: E501
@@ -487,11 +487,11 @@ class DayTrendApi(object):
         """Update one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_patch_with_http_info(day_trend, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_patch_with_http_info(day_trend, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DayTrend day_trend: (required)
         :param float id: (required)
         :return: DayTrend
@@ -500,7 +500,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['day_trend', 'id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -560,7 +560,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='DayTrend',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -570,11 +570,11 @@ class DayTrendApi(object):
         """Replace one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_put(day_trend, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_put(day_trend, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DayTrend day_trend: (required)
         :param float id: (required)
         :return: DayTrend
@@ -582,7 +582,7 @@ class DayTrendApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_id_put_with_http_info(day_trend, id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_id_put_with_http_info(day_trend, id, **kwargs)  # noqa: E501
@@ -592,11 +592,11 @@ class DayTrendApi(object):
         """Replace one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_id_put_with_http_info(day_trend, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_id_put_with_http_info(day_trend, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DayTrend day_trend: (required)
         :param float id: (required)
         :return: DayTrend
@@ -605,7 +605,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['day_trend', 'id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -665,7 +665,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='DayTrend',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -675,18 +675,18 @@ class DayTrendApi(object):
         """Create one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_post(day_trend, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_post(day_trend, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DayTrend day_trend: (required)
         :return: DayTrend
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_post_with_http_info(day_trend, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_post_with_http_info(day_trend, **kwargs)  # noqa: E501
@@ -696,11 +696,11 @@ class DayTrendApi(object):
         """Create one DayTrend  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_post_with_http_info(day_trend, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_post_with_http_info(day_trend, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param DayTrend day_trend: (required)
         :return: DayTrend
                  If the method is called asynchronously,
@@ -708,7 +708,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['day_trend']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -762,7 +762,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='DayTrend',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -772,11 +772,11 @@ class DayTrendApi(object):
         """Imports many trends and replace existing. Recomputes alerts  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_replace_all_in_source_source_id_post(source_id, day_trend_input_list_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_replace_all_in_source_source_id_post(source_id, day_trend_input_list_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :param DayTrendInputListDto day_trend_input_list_dto: (required)
         :return: DayTrendListDto
@@ -784,7 +784,7 @@ class DayTrendApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_day_trend_replace_all_in_source_source_id_post_with_http_info(source_id, day_trend_input_list_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_day_trend_replace_all_in_source_source_id_post_with_http_info(source_id, day_trend_input_list_dto, **kwargs)  # noqa: E501
@@ -794,11 +794,11 @@ class DayTrendApi(object):
         """Imports many trends and replace existing. Recomputes alerts  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_day_trend_replace_all_in_source_source_id_post_with_http_info(source_id, day_trend_input_list_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_day_trend_replace_all_in_source_source_id_post_with_http_info(source_id, day_trend_input_list_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :param DayTrendInputListDto day_trend_input_list_dto: (required)
         :return: DayTrendListDto
@@ -807,7 +807,7 @@ class DayTrendApi(object):
         """
 
         all_params = ['source_id', 'day_trend_input_list_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -867,7 +867,7 @@ class DayTrendApi(object):
             files=local_var_files,
             response_type='DayTrendListDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

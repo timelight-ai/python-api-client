@@ -179,6 +179,9 @@ class ModelPatchDto(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(ModelPatchDto, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

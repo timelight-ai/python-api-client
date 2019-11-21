@@ -312,6 +312,9 @@ class AlertDto(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(AlertDto, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

@@ -52,11 +52,13 @@ from timelight_ai_python_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-timelight_ai_python_api_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = timelight_ai_python_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# timelight_ai_python_api_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
 # create an instance of the API class
-api_instance = timelight_ai_python_api_client.AIApi()
+api_instance = timelight_ai_python_api_client.AIApi(timelight_ai_python_api_client.ApiClient(configuration))
 source_id = 8.14 # float | 
 
 try:

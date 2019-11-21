@@ -318,6 +318,9 @@ class DayTrend(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(DayTrend, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

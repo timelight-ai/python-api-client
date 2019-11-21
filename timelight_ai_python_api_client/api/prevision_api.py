@@ -37,18 +37,18 @@ class PrevisionApi(object):
         """Apply a source prevision to the whole group  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_group_apply_prevision_post(prevision_apply_group_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_group_apply_prevision_post(prevision_apply_group_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PrevisionApplyGroupDto prevision_apply_group_dto: (required)
         :return: PrevisionApplyGroupResponseDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_prevision_group_apply_prevision_post_with_http_info(prevision_apply_group_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_prevision_group_apply_prevision_post_with_http_info(prevision_apply_group_dto, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class PrevisionApi(object):
         """Apply a source prevision to the whole group  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_group_apply_prevision_post_with_http_info(prevision_apply_group_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_group_apply_prevision_post_with_http_info(prevision_apply_group_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PrevisionApplyGroupDto prevision_apply_group_dto: (required)
         :return: PrevisionApplyGroupResponseDto
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class PrevisionApi(object):
         """
 
         all_params = ['prevision_apply_group_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class PrevisionApi(object):
             files=local_var_files,
             response_type='PrevisionApplyGroupResponseDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -134,11 +134,11 @@ class PrevisionApi(object):
         """Fetch data previsions for a given year  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_list_source_id_year_get(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_list_source_id_year_get(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: PrevisionListDto
@@ -146,7 +146,7 @@ class PrevisionApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_prevision_list_source_id_year_get_with_http_info(year, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_prevision_list_source_id_year_get_with_http_info(year, source_id, **kwargs)  # noqa: E501
@@ -156,11 +156,11 @@ class PrevisionApi(object):
         """Fetch data previsions for a given year  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_list_source_id_year_get_with_http_info(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_list_source_id_year_get_with_http_info(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: PrevisionListDto
@@ -169,7 +169,7 @@ class PrevisionApi(object):
         """
 
         all_params = ['year', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -229,7 +229,7 @@ class PrevisionApi(object):
             files=local_var_files,
             response_type='PrevisionListDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -239,11 +239,11 @@ class PrevisionApi(object):
         """Generate default previsions for the source and save them  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_save_default_previsions_source_id_year_post(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_save_default_previsions_source_id_year_post(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: PrevisionBulkSaveResultDto
@@ -251,7 +251,7 @@ class PrevisionApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_prevision_save_default_previsions_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_prevision_save_default_previsions_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
@@ -261,11 +261,11 @@ class PrevisionApi(object):
         """Generate default previsions for the source and save them  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_save_default_previsions_source_id_year_post_with_http_info(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_save_default_previsions_source_id_year_post_with_http_info(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: PrevisionBulkSaveResultDto
@@ -274,7 +274,7 @@ class PrevisionApi(object):
         """
 
         all_params = ['year', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -334,7 +334,7 @@ class PrevisionApi(object):
             files=local_var_files,
             response_type='PrevisionBulkSaveResultDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -344,18 +344,18 @@ class PrevisionApi(object):
         """Save many previsions at once  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_save_post(prevision_bulk_save_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_save_post(prevision_bulk_save_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PrevisionBulkSaveDto prevision_bulk_save_dto: (required)
         :return: PrevisionBulkSaveResultDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_prevision_save_post_with_http_info(prevision_bulk_save_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_prevision_save_post_with_http_info(prevision_bulk_save_dto, **kwargs)  # noqa: E501
@@ -365,11 +365,11 @@ class PrevisionApi(object):
         """Save many previsions at once  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_save_post_with_http_info(prevision_bulk_save_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_save_post_with_http_info(prevision_bulk_save_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PrevisionBulkSaveDto prevision_bulk_save_dto: (required)
         :return: PrevisionBulkSaveResultDto
                  If the method is called asynchronously,
@@ -377,7 +377,7 @@ class PrevisionApi(object):
         """
 
         all_params = ['prevision_bulk_save_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -431,7 +431,7 @@ class PrevisionApi(object):
             files=local_var_files,
             response_type='PrevisionBulkSaveResultDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -441,18 +441,18 @@ class PrevisionApi(object):
         """Update a specific prevision  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_update_patch(prevision_patch_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_update_patch(prevision_patch_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PrevisionPatchDto prevision_patch_dto: (required)
         :return: PrevisionUpdateResultDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_prevision_update_patch_with_http_info(prevision_patch_dto, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_prevision_update_patch_with_http_info(prevision_patch_dto, **kwargs)  # noqa: E501
@@ -462,11 +462,11 @@ class PrevisionApi(object):
         """Update a specific prevision  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_prevision_update_patch_with_http_info(prevision_patch_dto, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_prevision_update_patch_with_http_info(prevision_patch_dto, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param PrevisionPatchDto prevision_patch_dto: (required)
         :return: PrevisionUpdateResultDto
                  If the method is called asynchronously,
@@ -474,7 +474,7 @@ class PrevisionApi(object):
         """
 
         all_params = ['prevision_patch_dto']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -528,7 +528,7 @@ class PrevisionApi(object):
             files=local_var_files,
             response_type='PrevisionUpdateResultDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

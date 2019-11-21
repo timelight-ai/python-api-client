@@ -37,17 +37,17 @@ class SourceApi(object):
         """All user sources  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_list_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_list_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: SourceListDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_source_list_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.v1_source_list_get_with_http_info(**kwargs)  # noqa: E501
@@ -57,18 +57,18 @@ class SourceApi(object):
         """All user sources  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_list_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_list_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: SourceListDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -116,7 +116,7 @@ class SourceApi(object):
             files=local_var_files,
             response_type='SourceListDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -126,18 +126,18 @@ class SourceApi(object):
         """Delete a source and all linked data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_source_id_delete(source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_source_id_delete(source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_source_source_id_delete_with_http_info(source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_source_source_id_delete_with_http_info(source_id, **kwargs)  # noqa: E501
@@ -147,11 +147,11 @@ class SourceApi(object):
         """Delete a source and all linked data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_source_id_delete_with_http_info(source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_source_id_delete_with_http_info(source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -159,7 +159,7 @@ class SourceApi(object):
         """
 
         all_params = ['source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -213,7 +213,7 @@ class SourceApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -223,11 +223,11 @@ class SourceApi(object):
         """Update a source group  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_source_id_group_patch(source_patch_group_dto, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_source_id_group_patch(source_patch_group_dto, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourcePatchGroupDto source_patch_group_dto: (required)
         :param float source_id: (required)
         :return: SourceDto
@@ -235,7 +235,7 @@ class SourceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_source_source_id_group_patch_with_http_info(source_patch_group_dto, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_source_source_id_group_patch_with_http_info(source_patch_group_dto, source_id, **kwargs)  # noqa: E501
@@ -245,11 +245,11 @@ class SourceApi(object):
         """Update a source group  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_source_id_group_patch_with_http_info(source_patch_group_dto, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_source_id_group_patch_with_http_info(source_patch_group_dto, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourcePatchGroupDto source_patch_group_dto: (required)
         :param float source_id: (required)
         :return: SourceDto
@@ -258,7 +258,7 @@ class SourceApi(object):
         """
 
         all_params = ['source_patch_group_dto', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -318,7 +318,7 @@ class SourceApi(object):
             files=local_var_files,
             response_type='SourceDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -328,11 +328,11 @@ class SourceApi(object):
         """Update a source  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_source_id_patch(source_patch_dto, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_source_id_patch(source_patch_dto, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourcePatchDto source_patch_dto: (required)
         :param float source_id: (required)
         :return: SourceDto
@@ -340,7 +340,7 @@ class SourceApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_source_source_id_patch_with_http_info(source_patch_dto, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_source_source_id_patch_with_http_info(source_patch_dto, source_id, **kwargs)  # noqa: E501
@@ -350,11 +350,11 @@ class SourceApi(object):
         """Update a source  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_source_source_id_patch_with_http_info(source_patch_dto, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_source_source_id_patch_with_http_info(source_patch_dto, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SourcePatchDto source_patch_dto: (required)
         :param float source_id: (required)
         :return: SourceDto
@@ -363,7 +363,7 @@ class SourceApi(object):
         """
 
         all_params = ['source_patch_dto', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -423,7 +423,7 @@ class SourceApi(object):
             files=local_var_files,
             response_type='SourceDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

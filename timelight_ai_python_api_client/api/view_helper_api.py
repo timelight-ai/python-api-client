@@ -37,17 +37,17 @@ class ViewHelperApi(object):
         """Get the alert view data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_view_helper_alerts_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_view_helper_alerts_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_view_helper_alerts_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.v1_view_helper_alerts_get_with_http_info(**kwargs)  # noqa: E501
@@ -57,18 +57,18 @@ class ViewHelperApi(object):
         """Get the alert view data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_view_helper_alerts_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_view_helper_alerts_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -116,7 +116,7 @@ class ViewHelperApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -126,17 +126,17 @@ class ViewHelperApi(object):
         """Get the alert referential view data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_view_helper_alerts_ref_get(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_view_helper_alerts_ref_get(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: AlertRefResultDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_view_helper_alerts_ref_get_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.v1_view_helper_alerts_ref_get_with_http_info(**kwargs)  # noqa: E501
@@ -146,18 +146,18 @@ class ViewHelperApi(object):
         """Get the alert referential view data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_view_helper_alerts_ref_get_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_view_helper_alerts_ref_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: AlertRefResultDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -205,7 +205,7 @@ class ViewHelperApi(object):
             files=local_var_files,
             response_type='AlertRefResultDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -215,11 +215,11 @@ class ViewHelperApi(object):
         """Get the alert modal view data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_view_helper_days_near_date_source_id_day_date_get(day_date, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_view_helper_days_near_date_source_id_day_date_get(day_date, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str day_date: (required)
         :param float source_id: (required)
         :return: DaysNearDateResultDto
@@ -227,7 +227,7 @@ class ViewHelperApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_view_helper_days_near_date_source_id_day_date_get_with_http_info(day_date, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_view_helper_days_near_date_source_id_day_date_get_with_http_info(day_date, source_id, **kwargs)  # noqa: E501
@@ -237,11 +237,11 @@ class ViewHelperApi(object):
         """Get the alert modal view data  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_view_helper_days_near_date_source_id_day_date_get_with_http_info(day_date, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_view_helper_days_near_date_source_id_day_date_get_with_http_info(day_date, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str day_date: (required)
         :param float source_id: (required)
         :return: DaysNearDateResultDto
@@ -250,7 +250,7 @@ class ViewHelperApi(object):
         """
 
         all_params = ['day_date', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -310,7 +310,7 @@ class ViewHelperApi(object):
             files=local_var_files,
             response_type='DaysNearDateResultDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

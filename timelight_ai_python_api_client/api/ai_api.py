@@ -37,18 +37,18 @@ class AIApi(object):
         """Auto detect-anomalies  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_anomalies_source_id_get(source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_anomalies_source_id_get(source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :return: AnomaliesResponseDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_ai_anomalies_source_id_get_with_http_info(source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_ai_anomalies_source_id_get_with_http_info(source_id, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class AIApi(object):
         """Auto detect-anomalies  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_anomalies_source_id_get_with_http_info(source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_anomalies_source_id_get_with_http_info(source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float source_id: (required)
         :return: AnomaliesResponseDto
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class AIApi(object):
         """
 
         all_params = ['source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class AIApi(object):
             files=local_var_files,
             response_type='AnomaliesResponseDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -135,11 +135,11 @@ class AIApi(object):
 
         Erases and re-computes all day models for a source and year  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_day_models_source_id_year_post(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_day_models_source_id_year_post(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: RecomputeDayModelsResponseDto
@@ -147,7 +147,7 @@ class AIApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_ai_recompute_day_models_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_ai_recompute_day_models_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
@@ -158,11 +158,11 @@ class AIApi(object):
 
         Erases and re-computes all day models for a source and year  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_day_models_source_id_year_post_with_http_info(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_day_models_source_id_year_post_with_http_info(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: RecomputeDayModelsResponseDto
@@ -171,7 +171,7 @@ class AIApi(object):
         """
 
         all_params = ['year', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -231,7 +231,7 @@ class AIApi(object):
             files=local_var_files,
             response_type='RecomputeDayModelsResponseDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -242,11 +242,11 @@ class AIApi(object):
 
         This computes the X/Y projection of all days in the source for the given year  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_days_projection_source_id_year_post(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_days_projection_source_id_year_post(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: RecomputeDaysProjectionResponseDto
@@ -254,7 +254,7 @@ class AIApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_ai_recompute_days_projection_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_ai_recompute_days_projection_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
@@ -265,11 +265,11 @@ class AIApi(object):
 
         This computes the X/Y projection of all days in the source for the given year  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_days_projection_source_id_year_post_with_http_info(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_days_projection_source_id_year_post_with_http_info(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :return: RecomputeDaysProjectionResponseDto
@@ -278,7 +278,7 @@ class AIApi(object):
         """
 
         all_params = ['year', 'source_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -338,7 +338,7 @@ class AIApi(object):
             files=local_var_files,
             response_type='RecomputeDaysProjectionResponseDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -349,11 +349,11 @@ class AIApi(object):
 
         This operations erases both non-handled alerts and user previsions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_models_source_id_year_post(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_models_source_id_year_post(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :param float model_count:
@@ -362,7 +362,7 @@ class AIApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_ai_recompute_models_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_ai_recompute_models_source_id_year_post_with_http_info(year, source_id, **kwargs)  # noqa: E501
@@ -373,11 +373,11 @@ class AIApi(object):
 
         This operations erases both non-handled alerts and user previsions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_models_source_id_year_post_with_http_info(year, source_id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_models_source_id_year_post_with_http_info(year, source_id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float year: (required)
         :param float source_id: (required)
         :param float model_count:
@@ -387,7 +387,7 @@ class AIApi(object):
         """
 
         all_params = ['year', 'source_id', 'model_count']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -449,7 +449,7 @@ class AIApi(object):
             files=local_var_files,
             response_type='RecomputeModelsResponseDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -460,18 +460,18 @@ class AIApi(object):
 
         This operations erases the group configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_source_models_model_count_post(model_count, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_source_models_model_count_post(model_count, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float model_count: (required)
         :return: RecomputeSourceModelsResponseDto
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.v1_ai_recompute_source_models_model_count_post_with_http_info(model_count, **kwargs)  # noqa: E501
         else:
             (data) = self.v1_ai_recompute_source_models_model_count_post_with_http_info(model_count, **kwargs)  # noqa: E501
@@ -482,11 +482,11 @@ class AIApi(object):
 
         This operations erases the group configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.v1_ai_recompute_source_models_model_count_post_with_http_info(model_count, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.v1_ai_recompute_source_models_model_count_post_with_http_info(model_count, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param float model_count: (required)
         :return: RecomputeSourceModelsResponseDto
                  If the method is called asynchronously,
@@ -494,7 +494,7 @@ class AIApi(object):
         """
 
         all_params = ['model_count']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -548,7 +548,7 @@ class AIApi(object):
             files=local_var_files,
             response_type='RecomputeSourceModelsResponseDto',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
