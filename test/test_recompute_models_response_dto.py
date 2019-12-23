@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.models.recompute_models_response_dto import RecomputeModelsResponseDto  # noqa: E501
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.models.recompute_models_response_dto import RecomputeModelsResponseDto  # noqa: E501
+from timelight_ai_python_api_client.rest import ApiException
 
 
 class TestRecomputeModelsResponseDto(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestRecomputeModelsResponseDto(unittest.TestCase):
     def testRecomputeModelsResponseDto(self):
         """Test RecomputeModelsResponseDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = timelight-ai-python-api-client.models.recompute_models_response_dto.RecomputeModelsResponseDto()  # noqa: E501
+        # model = timelight_ai_python_api_client.models.recompute_models_response_dto.RecomputeModelsResponseDto()  # noqa: E501
         pass
 
 

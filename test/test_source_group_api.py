@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.api.source_group_api import SourceGroupApi  # noqa: E501
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.api.source_group_api import SourceGroupApi  # noqa: E501
+from timelight_ai_python_api_client.rest import ApiException
 
 
 class TestSourceGroupApi(unittest.TestCase):
     """SourceGroupApi unit test stubs"""
 
     def setUp(self):
-        self.api = timelight-ai-python-api-client.api.source_group_api.SourceGroupApi()  # noqa: E501
+        self.api = timelight_ai_python_api_client.api.source_group_api.SourceGroupApi()  # noqa: E501
 
     def tearDown(self):
         pass

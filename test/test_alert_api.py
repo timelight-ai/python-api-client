@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.api.alert_api import AlertApi  # noqa: E501
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.api.alert_api import AlertApi  # noqa: E501
+from timelight_ai_python_api_client.rest import ApiException
 
 
 class TestAlertApi(unittest.TestCase):
     """AlertApi unit test stubs"""
 
     def setUp(self):
-        self.api = timelight-ai-python-api-client.api.alert_api.AlertApi()  # noqa: E501
+        self.api = timelight_ai_python_api_client.api.alert_api.AlertApi()  # noqa: E501
 
     def tearDown(self):
         pass

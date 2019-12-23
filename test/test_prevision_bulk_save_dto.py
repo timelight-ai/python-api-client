@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import timelight-ai-python-api-client
-from timelight-ai-python-api-client.models.prevision_bulk_save_dto import PrevisionBulkSaveDto  # noqa: E501
-from timelight-ai-python-api-client.rest import ApiException
+import timelight_ai_python_api_client
+from timelight_ai_python_api_client.models.prevision_bulk_save_dto import PrevisionBulkSaveDto  # noqa: E501
+from timelight_ai_python_api_client.rest import ApiException
 
 
 class TestPrevisionBulkSaveDto(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestPrevisionBulkSaveDto(unittest.TestCase):
     def testPrevisionBulkSaveDto(self):
         """Test PrevisionBulkSaveDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = timelight-ai-python-api-client.models.prevision_bulk_save_dto.PrevisionBulkSaveDto()  # noqa: E501
+        # model = timelight_ai_python_api_client.models.prevision_bulk_save_dto.PrevisionBulkSaveDto()  # noqa: E501
         pass
 
 
