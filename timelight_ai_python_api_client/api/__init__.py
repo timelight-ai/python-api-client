@@ -10,6 +10,7 @@ from timelight_ai_python_api_client.api.day_context_api import DayContextApi
 from timelight_ai_python_api_client.api.day_trend_api import DayTrendApi
 from timelight_ai_python_api_client.api.import_api import ImportApi
 from timelight_ai_python_api_client.api.model_api import ModelApi
+from timelight_ai_python_api_client.api.onboarding_api import OnboardingApi
 from timelight_ai_python_api_client.api.prevision_api import PrevisionApi
 from timelight_ai_python_api_client.api.source_api import SourceApi
 from timelight_ai_python_api_client.api.source_group_api import SourceGroupApi

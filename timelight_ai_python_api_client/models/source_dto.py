@@ -39,6 +39,7 @@ class SourceDto(object):
         'projection_y': 'float',
         'reference_year': 'float',
         'has_prevision': 'bool',
+        'has_custom_models': 'bool',
         'prevision_enabled': 'bool',
         'latitude': 'float',
         'longitude': 'float',
@@ -56,6 +57,7 @@ class SourceDto(object):
         'projection_y': 'projectionY',
         'reference_year': 'referenceYear',
         'has_prevision': 'hasPrevision',
+        'has_custom_models': 'hasCustomModels',
         'prevision_enabled': 'previsionEnabled',
         'latitude': 'latitude',
         'longitude': 'longitude',
@@ -64,7 +66,7 @@ class SourceDto(object):
         'alert_max_criticity': 'alertMaxCriticity'
     }
 
-    def __init__(self, id=None, name=None, group_id=None, group_inertia=None, projection_x=None, projection_y=None, reference_year=None, has_prevision=None, prevision_enabled=None, latitude=None, longitude=None, address=None, alert_min_criticity=None, alert_max_criticity=None):  # noqa: E501
+    def __init__(self, id=None, name=None, group_id=None, group_inertia=None, projection_x=None, projection_y=None, reference_year=None, has_prevision=None, has_custom_models=None, prevision_enabled=None, latitude=None, longitude=None, address=None, alert_min_criticity=None, alert_max_criticity=None):  # noqa: E501
         """SourceDto - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -75,6 +77,7 @@ class SourceDto(object):
         self._projection_y = None
         self._reference_year = None
         self._has_prevision = None
+        self._has_custom_models = None
         self._prevision_enabled = None
         self._latitude = None
         self._longitude = None
@@ -85,18 +88,28 @@ class SourceDto(object):
 
         self.id = id
         self.name = name
-        self.group_id = group_id
-        self.group_inertia = group_inertia
-        self.projection_x = projection_x
-        self.projection_y = projection_y
+        if group_id is not None:
+            self.group_id = group_id
+        if group_inertia is not None:
+            self.group_inertia = group_inertia
+        if projection_x is not None:
+            self.projection_x = projection_x
+        if projection_y is not None:
+            self.projection_y = projection_y
         self.reference_year = reference_year
         self.has_prevision = has_prevision
+        self.has_custom_models = has_custom_models
         self.prevision_enabled = prevision_enabled
-        self.latitude = latitude
-        self.longitude = longitude
-        self.address = address
-        self.alert_min_criticity = alert_min_criticity
-        self.alert_max_criticity = alert_max_criticity
+        if latitude is not None:
+            self.latitude = latitude
+        if longitude is not None:
+            self.longitude = longitude
+        if address is not None:
+            self.address = address
+        if alert_min_criticity is not None:
+            self.alert_min_criticity = alert_min_criticity
+        if alert_max_criticity is not None:
+            self.alert_max_criticity = alert_max_criticity
 
     @property
     def id(self):
@@ -162,8 +175,6 @@ class SourceDto(object):
         :param group_id: The group_id of this SourceDto.  # noqa: E501
         :type: float
         """
-        if group_id is None:
-            raise ValueError("Invalid value for `group_id`, must not be `None`")  # noqa: E501
 
         self._group_id = group_id
 
@@ -185,8 +196,6 @@ class SourceDto(object):
         :param group_inertia: The group_inertia of this SourceDto.  # noqa: E501
         :type: float
         """
-        if group_inertia is None:
-            raise ValueError("Invalid value for `group_inertia`, must not be `None`")  # noqa: E501
 
         self._group_inertia = group_inertia
 
@@ -208,8 +217,6 @@ class SourceDto(object):
         :param projection_x: The projection_x of this SourceDto.  # noqa: E501
         :type: float
         """
-        if projection_x is None:
-            raise ValueError("Invalid value for `projection_x`, must not be `None`")  # noqa: E501
 
         self._projection_x = projection_x
 
@@ -231,8 +238,6 @@ class SourceDto(object):
         :param projection_y: The projection_y of this SourceDto.  # noqa: E501
         :type: float
         """
-        if projection_y is None:
-            raise ValueError("Invalid value for `projection_y`, must not be `None`")  # noqa: E501
 
         self._projection_y = projection_y
 
@@ -283,6 +288,29 @@ class SourceDto(object):
         self._has_prevision = has_prevision
 
     @property
+    def has_custom_models(self):
+        """Gets the has_custom_models of this SourceDto.  # noqa: E501
+
+
+        :return: The has_custom_models of this SourceDto.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_custom_models
+
+    @has_custom_models.setter
+    def has_custom_models(self, has_custom_models):
+        """Sets the has_custom_models of this SourceDto.
+
+
+        :param has_custom_models: The has_custom_models of this SourceDto.  # noqa: E501
+        :type: bool
+        """
+        if has_custom_models is None:
+            raise ValueError("Invalid value for `has_custom_models`, must not be `None`")  # noqa: E501
+
+        self._has_custom_models = has_custom_models
+
+    @property
     def prevision_enabled(self):
         """Gets the prevision_enabled of this SourceDto.  # noqa: E501
 
@@ -323,8 +351,6 @@ class SourceDto(object):
         :param latitude: The latitude of this SourceDto.  # noqa: E501
         :type: float
         """
-        if latitude is None:
-            raise ValueError("Invalid value for `latitude`, must not be `None`")  # noqa: E501
 
         self._latitude = latitude
 
@@ -346,8 +372,6 @@ class SourceDto(object):
         :param longitude: The longitude of this SourceDto.  # noqa: E501
         :type: float
         """
-        if longitude is None:
-            raise ValueError("Invalid value for `longitude`, must not be `None`")  # noqa: E501
 
         self._longitude = longitude
 
@@ -369,8 +393,6 @@ class SourceDto(object):
         :param address: The address of this SourceDto.  # noqa: E501
         :type: str
         """
-        if address is None:
-            raise ValueError("Invalid value for `address`, must not be `None`")  # noqa: E501
 
         self._address = address
 
@@ -392,8 +414,6 @@ class SourceDto(object):
         :param alert_min_criticity: The alert_min_criticity of this SourceDto.  # noqa: E501
         :type: float
         """
-        if alert_min_criticity is None:
-            raise ValueError("Invalid value for `alert_min_criticity`, must not be `None`")  # noqa: E501
 
         self._alert_min_criticity = alert_min_criticity
 
@@ -415,8 +435,6 @@ class SourceDto(object):
         :param alert_max_criticity: The alert_max_criticity of this SourceDto.  # noqa: E501
         :type: float
         """
-        if alert_max_criticity is None:
-            raise ValueError("Invalid value for `alert_max_criticity`, must not be `None`")  # noqa: E501
 
         self._alert_max_criticity = alert_max_criticity
 

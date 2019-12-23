@@ -131,7 +131,7 @@ class AIApi(object):
             collection_formats=collection_formats)
 
     def v1_ai_recompute_day_models_source_id_year_post(self, year, source_id, **kwargs):  # noqa: E501
-        """Recomputes all day modesl  # noqa: E501
+        """Recomputes all day models  # noqa: E501
 
         Erases and re-computes all day models for a source and year  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -154,7 +154,7 @@ class AIApi(object):
             return data
 
     def v1_ai_recompute_day_models_source_id_year_post_with_http_info(self, year, source_id, **kwargs):  # noqa: E501
-        """Recomputes all day modesl  # noqa: E501
+        """Recomputes all day models  # noqa: E501
 
         Erases and re-computes all day models for a source and year  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

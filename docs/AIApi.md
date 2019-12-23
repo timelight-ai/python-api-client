@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v1_ai_anomalies_source_id_get**](AIApi.md#v1_ai_anomalies_source_id_get) | **GET** /v1/ai/anomalies/{sourceId} | Auto detect-anomalies
-[**v1_ai_recompute_day_models_source_id_year_post**](AIApi.md#v1_ai_recompute_day_models_source_id_year_post) | **POST** /v1/ai/recompute-day-models/{sourceId}/{year} | Recomputes all day modesl
+[**v1_ai_recompute_day_models_source_id_year_post**](AIApi.md#v1_ai_recompute_day_models_source_id_year_post) | **POST** /v1/ai/recompute-day-models/{sourceId}/{year} | Recomputes all day models
 [**v1_ai_recompute_days_projection_source_id_year_post**](AIApi.md#v1_ai_recompute_days_projection_source_id_year_post) | **POST** /v1/ai/recompute-days-projection/{sourceId}/{year} | Computes all days projection for a source and save them
 [**v1_ai_recompute_models_source_id_year_post**](AIApi.md#v1_ai_recompute_models_source_id_year_post) | **POST** /v1/ai/recompute-models/{sourceId}/{year} | Triggers a model recompute
 [**v1_ai_recompute_source_models_model_count_post**](AIApi.md#v1_ai_recompute_source_models_model_count_post) | **POST** /v1/ai/recompute-source-models/{modelCount} | Triggers a model recompute for source groups
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 # **v1_ai_recompute_day_models_source_id_year_post**
 > RecomputeDayModelsResponseDto v1_ai_recompute_day_models_source_id_year_post(year, source_id)
 
-Recomputes all day modesl
+Recomputes all day models
 
 Erases and re-computes all day models for a source and year
 
@@ -90,7 +90,7 @@ year = 8.14 # float |
 source_id = 8.14 # float | 
 
 try:
-    # Recomputes all day modesl
+    # Recomputes all day models
     api_response = api_instance.v1_ai_recompute_day_models_source_id_year_post(year, source_id)
     pprint(api_response)
 except ApiException as e:

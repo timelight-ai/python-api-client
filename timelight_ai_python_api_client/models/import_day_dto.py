@@ -79,7 +79,7 @@ class ImportDayDto(object):
     def activity(self):
         """Gets the activity of this ImportDayDto.  # noqa: E501
 
-        An array of 144 values. Each value represents a time window of 10 minutes  # noqa: E501
+        An array of 144, 1440 or 86400 values. Each value represents a time window of 10 minutes, 1 minute or 1 second  # noqa: E501
 
         :return: The activity of this ImportDayDto.  # noqa: E501
         :rtype: list[float]
@@ -90,7 +90,7 @@ class ImportDayDto(object):
     def activity(self, activity):
         """Sets the activity of this ImportDayDto.
 
-        An array of 144 values. Each value represents a time window of 10 minutes  # noqa: E501
+        An array of 144, 1440 or 86400 values. Each value represents a time window of 10 minutes, 1 minute or 1 second  # noqa: E501
 
         :param activity: The activity of this ImportDayDto.  # noqa: E501
         :type: list[float]
